@@ -1,4 +1,5 @@
-# SPA for shared hosting under /admin-dashboard/
+# Place this file INSIDE public_html/admin/ (same folder as index.html)
+# Asset + SPA fallback for the React app deployed under /admin/
 
 <IfModule mod_mime.c>
   AddType application/javascript .js .mjs
@@ -9,7 +10,7 @@
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /admin-dashboard/
+  RewriteBase /admin/
 
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
